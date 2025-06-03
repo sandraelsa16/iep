@@ -1,0 +1,53 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+}
+
+.logo-img {
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.login-heading{
+    text-align: center;
+    font-weight: 700;
+}
+
+.login-comp input[type="text"],
+.login-comp input[type="password"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.login-comp label {
+    font-size: smaller;
+}
+
+.remember input{
+    margin-right: 8px;
+}
+
+.required {
+    color: red;
+}
+
+.login-button {
+    width: 100%;
+  padding: 8px;
+  margin-top: 30px;
+  background-color: #167a5c;
+  color: white;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
