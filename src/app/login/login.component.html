@@ -2,13 +2,15 @@
     <div class="login">
         <img class="logo-img" src="assets/images/Logo.png" alt="logo">
         <p class="login-heading">Sign in</p>
-        <form action="">
+        <form action=""  [formGroup]="loginForm" (ngSubmit)="login()">
             <div class="login-comp">
                 <label for="">SSO ID<span class="required">*</span></label>
-                <input type="text" placeholder="Enter the SSO ID" required>
+                <input type="text" id="username" placeholder=" USERNAME" class="p-1" formControlName="username" >
+                <p class="text-danger fw-bolder" *ngIf="loginForm.get('username')?.errors && loginForm.get('username')?.touched">Invalid Username</p>
                 <br>
                 <label for="">Password<span class="required">*</span></label>
-                <input type="text" placeholder="Enter the password" required>
+                <input type="password" id="password" placeholder="PASSWORD" class="p-1" formControlName="password">
+                <p class="text-danger fw-bolder" *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched">Invalid password</p>
             </div>
         </form>
 
@@ -17,7 +19,7 @@
             <label for="">Remember me</label>
         </div>
 
-        <button class="login-button">Login</button>
+        <button class="login-button" [disabled]="loginForm.invalid">Login</button>
 
     </div>
 </div>

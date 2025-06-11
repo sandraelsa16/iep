@@ -1,0 +1,15 @@
+<div
+  class="alert alert-warning d-flex align-items-center justify-content-between border border-warning"
+  role="alert"
+  *ngIf="showAlert"
+>
+  <div class="d-flex align-items-center gap-2">
+    <span class="material-symbols-outlined text-warning"> warning </span>
+    <span>
+      You have received <strong>3 primary resource re assignment requests</strong>
+      <a href="#" class="text-danger text-decoration-none fw-semibold ms-2">View requests</a>
+    </span>
+  </div>
+  <button type="button" class="btn-close" aria-label="Close" (click)="closeAlert()"></button>
+</div>
+

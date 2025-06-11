@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { LayoutModule } from '@progress/kendo-angular-layout';
+import { LayoutModule, TabStripModule } from '@progress/kendo-angular-layout';
 import { CommonModule } from '@angular/common';
 import { FilteractivitiesComponent } from "../filteractivities/filteractivities.component";
 import { ActivitiesComponent } from "../activities/activities.component";
+import { NotificationComponent } from "../notification/notification.component";
+
 
 @Component({
   selector: 'app-tabs',
   standalone: true,
-  imports: [LayoutModule, CommonModule, FilteractivitiesComponent, ActivitiesComponent],
+  imports: [  FilteractivitiesComponent,ActivitiesComponent, NotificationComponent,TabStripModule,CommonModule],
   templateUrl: './tabs.component.html',
   styleUrl: './tabs.component.css'
 })
@@ -22,5 +24,5 @@ export class TabsComponent {
     { title: 'Technical Alignment', content: 'Alignment content' }
   ];
 
-  public selectedIndex = 0;
+ selectedIndex = 0;
 }

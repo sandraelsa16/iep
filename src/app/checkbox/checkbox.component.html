@@ -6,15 +6,29 @@
                     <div class="searchbar">
                         <input type="text" class="searchbox" [style.width.px]="270"
                             placeholder="Search job numbers or contract name..">
-                        <button kendoButton class="material-symbols-outlined searchbutton ">search</button>
+                        <button kendoButton class="material-symbols-outlined searchbutton">search</button>
                     </div>
                     <button kendoButton class="advancedbutton"> > Advanced search</button>
                     <p>Result:104 Contracts</p>
                     <div>
-                        <kendo-treeview [nodes]="data" textField="text" kendoTreeViewHierarchyBinding
-                            childrenField="items" kendoTreeViewExpandable [expandedKeys]="expandedKeys"
-                            kendoTreeViewCheckable [(checkedKeys)]="checkedKeys">
-                        </kendo-treeview>
+                        <kendo-treeview
+  [nodes]="currentProjects"
+  textField="text"
+  kendoTreeViewExpandable
+  kendoTreeViewCheckable
+  kendoTreeViewHierarchyBinding
+  childrenField="items"
+  [(checkedKeys)]="checkedKeys"
+  [expandedKeys]="expandedKeys"
+>
+  <ng-template kendoTreeViewNodeTemplate let-dataItem>
+    <span>
+      {{ dataItem.text }}
+      <span *ngIf="dataItem.isFavorite" class="material-symbols-outlined ">star</span>
+    </span>
+  </ng-template>
+</kendo-treeview>
+
                     </div>
                 </ng-template>
             </kendo-tabstrip-tab>
