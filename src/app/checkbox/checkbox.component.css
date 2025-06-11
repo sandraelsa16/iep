@@ -1,4 +1,30 @@
  kendo-tabstrip p {
-        margin: 0;
-        padding: 8px;
-      }
+     margin: 0;
+     padding: 8px;
+ }
+
+ .sidebar-container {
+     width: 300px;
+ }
+
+ .searchbox {
+     border: 2px solid rgb(195, 195, 195);
+     border-radius: 12px;
+     padding: 5px;
+     padding: 5px;
+ }
+
+ .searchbutton {
+    position: relative;
+    top: -33px;
+    left: 235px;
+    background: none;
+    border: none;
+ }
+
+.advancedbutton {
+    width: 260px;
+    background-color: #147d64;
+    color: white;
+    font-weight: bold;
+}

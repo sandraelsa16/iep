@@ -1,50 +1,33 @@
 <div class=" sidebar-container">
- <div class="contracts">
-    <kendo-tabstrip>
-      <kendo-tabstrip-tab title="My Contracts">
-        <ng-template kendoTabContent>
-          <p>Tab 1 Content</p>
-        </ng-template>
-      </kendo-tabstrip-tab>
-      <kendo-tabstrip-tab title="All Contracts">
-        <ng-template kendoTabContent>
-          <p>Tab 2 Content</p>
-        </ng-template>
-      </kendo-tabstrip-tab>
-      <kendo-tabstrip-tab title="Favourites">
-        <ng-template kendoTabContent>
-          <p>Tab 3 Content</p>
-        </ng-template>
-      </kendo-tabstrip-tab>
-    </kendo-tabstrip>
+    <div class="contracts">
+        <kendo-tabstrip>
+            <kendo-tabstrip-tab title="My Contracts" [selected]="true">
+                <ng-template kendoTabContent>
+                    <div class="searchbar">
+                        <input type="text" class="searchbox" [style.width.px]="270"
+                            placeholder="Search job numbers or contract name..">
+                        <button kendoButton class="material-symbols-outlined searchbutton ">search</button>
+                    </div>
+                    <button kendoButton class="advancedbutton"> > Advanced search</button>
+                    <p>Result:104 Contracts</p>
+                    <div>
+                        <kendo-treeview [nodes]="data" textField="text" kendoTreeViewHierarchyBinding
+                            childrenField="items" kendoTreeViewExpandable [expandedKeys]="expandedKeys"
+                            kendoTreeViewCheckable [(checkedKeys)]="checkedKeys">
+                        </kendo-treeview>
+                    </div>
+                </ng-template>
+            </kendo-tabstrip-tab>
+            <kendo-tabstrip-tab title="All Contracts">
+                <ng-template kendoTabContent>
+                    <p>All Contracts</p>
+                </ng-template>
+            </kendo-tabstrip-tab>
+            <kendo-tabstrip-tab title="Favourites">
+                <ng-template kendoTabContent>
+                    <p>Favourites</p>
+                </ng-template>
+            </kendo-tabstrip-tab>
+        </kendo-tabstrip>
+    </div>
 </div>
-<div class="searchbar">
-         <kendo-textbox
-        [style.width.px]="200"
-        placeholder="Search in all columns..." 
-      ></kendo-textbox>
-   <span class="material-symbols-outlined">
-search
-</span>
-</div>
-<button kendoButton> > Advanced search</button>
-
-<p>Result:</p>
-<div>
- <kendo-treeview
-      [nodes]="data"
-      textField="text"
-      kendoTreeViewHierarchyBinding
-      childrenField="items"
-      kendoTreeViewExpandable
-      [expandedKeys]="expandedKeys"
-      kendoTreeViewCheckable
-      [(checkedKeys)]="checkedKeys"
-    >
-    </kendo-treeview>
-</div>
-</div>
-
-
-
-  

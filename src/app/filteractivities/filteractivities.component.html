@@ -1,51 +1,58 @@
 <div class="filteractivities-container">
-    <div class="d-flex justify-content-between heading-container">
-         <h4>Filter app-activities</h4>
-    <div class="d-flex  gap-4">
-        <p>Clear Filter</p>
-       <span class="material-symbols-outlined">
-more_horiz
-</span>
-       <span class="material-symbols-outlined">
-keyboard_arrow_down
-</span>
-    </div>
-    </div> 
-    <kendo-label text="View As">
-          <br />
-          <kendo-dropdownlist [data]="listItems" value="Individual">
-          </kendo-dropdownlist>
-    </kendo-label>
-    <div>
-        <button kendoButton>Total Documents</button>
-    <button kendoButton>Total Documents</button>
-    <button kendoButton>Total Documents</button>
-    <button kendoButton>Total Documents</button>
-    </div>
-    <div class="timeline-wrapper">
-  <button kendoButton icon="chevron-left" class="nav-btn"> &#60;</button>
-
-  <div class="timeline-cards">
-    <div class="card red">
-      <div class="title">Today</div>
-      <div class="subtitle">1 out of 1 are not completed</div>
-    </div>
-    <div class="card yellow">
-      <div class="title">FW 6, 2025 (This Week)</div>
-      <div class="subtitle">6 out of 15 are not completed</div>
-    </div>
-    <div class="card">
-      <div class="title">FW 7, 2025 (Next Week)</div>
-      <div class="subtitle">4 out of 8 are not completed</div>
-    </div>
-    <div class="card">
-      <div class="title">FW 8, 2025</div>
-      <div class="subtitle">4 out of 8 are not completed</div>
+  <div class="d-flex justify-content-between heading-container">
+    <p class="filterheading">Filter Activities</p>
+    <div class="d-flex align-items-center gap-4">
+      <span style="color: #5bc5ae;">Clear Filter</span>
+      <span class="material-symbols-outlined">
+        more_horiz
+      </span>
+      <span class="material-symbols-outlined">
+        keyboard_arrow_down
+      </span>
     </div>
   </div>
+  <div class="filter-subcontainer">
+    <div class="d-flex gap-3">
+       <kendo-label style="font-weight: bold;" text="View As">
+    <br />
+    <kendo-dropdownlist class="dropdownlist" value="Individual">
+    </kendo-dropdownlist>
+  </kendo-label>
+       <kendo-label style="font-weight: bold;" text="View As">
+    <br />
+    <kendo-dropdownlist class="dropdownlist" value="Individual">
+    </kendo-dropdownlist>
+  </kendo-label>
+    </div>
+   
+  <div >
+    <button *ngFor="let item of docButtons" class="buttondisplay" [ngClass]="{ 'selected-button': item.value === selectedButton }"
+  (click)="onSelect(item.value)" kendoButton>{{item.value}}</button>
+  </div>
+  <div class="timeline-wrapper">
+    <button kendoButton icon="chevron-left" class="nav-btn"> &#60;</button>
 
-  <button kendoButton icon="chevron-right" class="nav-btn">></button>
+    <div class="timeline-cards">
+      <div class="card red">
+        <div class="title">Today</div>
+        <div class="subtitle">1 out of 1 are not completed</div>
+      </div>
+      <div class="card yellow">
+        <div class="title">FW 6, 2025 (This Week)</div>
+        <div class="subtitle">6 out of 15 are not completed</div>
+      </div>
+      <div class="card">
+        <div class="title">FW 7, 2025 (Next Week)</div>
+        <div class="subtitle">4 out of 8 are not completed</div>
+      </div>
+      <div class="card">
+        <div class="title">FW 8, 2025</div>
+        <div class="subtitle">4 out of 8 are not completed</div>
+      </div>
+    </div>
+
+    <button kendoButton icon="chevron-right" class="nav-btn">></button>
+  </div>
+  </div>
+
 </div>
-
-</div>
-

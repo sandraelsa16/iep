@@ -2,14 +2,23 @@
     border: 1px solid grey;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
  kendo-dropdownlist {
         width: 170px;
       }
 
 .heading-container {
-    border: 1px solid grey;
+    border-bottom: 1px solid grey;
 } 
+
+.filterheading {
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
 
 .timeline-wrapper {
   display: flex;
@@ -53,4 +62,33 @@
       }
     }
   }
+}
+
+
+.filter-subcontainer {
+  padding: 5px 10px;
+}
+
+.dropdownlist {
+  border: 1px solid rgb(211, 208, 208);
+  padding: 3px 5px;
+  background-color: white;
+  width: 130px;
+  margin-bottom: 10px; 
+}
+
+.dropdown {
+  display: flex;
+
+}
+
+.buttondisplay {
+ border-radius: 25px;
+  margin: 5px 10px;
+}
+
+.selected-button {
+  background-color: #147d64 !important;
+  color: white !important;
+  border-color:#147d64!important;
 }

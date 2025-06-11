@@ -1,13 +1,21 @@
-
 <div class="dashboard-container">
-    
-    <app-header/>
-
-<div class="d-flex">
-    <app-sidebar />
-    <div class="d-flex flex-column gap-2 operation-container ">
-        <h2 >Operation</h2>
-        <app-tabs></app-tabs>
+    <app-header />
+    <div class="d-flex">
+        <app-sidebar />
+        <div class="d-flex flex-column gap-2 operation-container">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h2>Operation</h2>
+                </div>
+                <div class="d-flex justify-content-between gap-2 align-items-center"> 
+                    <span >Last uploaded:04-06-2025</span>
+                     <span>|</span>
+                     <span>YTD</span>
+                     <span>71 %</span>
+                     <button kendoButton class="dovsbuy">Do vs Buy</button>
+                </div>
+            </div>
+            <app-tabs></app-tabs>
+        </div>
     </div>
-</div>
 </div>

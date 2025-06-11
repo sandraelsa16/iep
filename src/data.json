@@ -1,0 +1,61 @@
+{
+  "Current Projects": {
+    "1104096-NCIC III Ammonia/": {
+      "selected": true,
+      "starred": true
+    },
+    "1104088-Ar Ratawi": {
+      "selected": true,
+      "subprojects": {
+        "HCC - Train #2 & 3 without string test": {
+          "selected": true
+        },
+        "HCC - Train #1 with string test": {
+          "selected": true
+        },
+        "Other": {
+          "selected": true,
+          "subprojects": {
+            "1114057": [
+              { "selected": true },
+              { "selected": true },
+              { "selected": true }
+            ]
+          }
+        }
+      }
+    },
+    "9000133-Leviathan Tex": {
+      "selected": true,
+      "starred": true
+    },
+    "1709043-Garraf": {
+      "selected": true
+    },
+    "1104057-BP UCC HCC Package": {
+      "selected": true
+    },
+    "1104043-ASAB Lifting Project #2": {
+      "selected": false
+    },
+    "1800475-GTFT - GTCC - LP Booster": {
+      "selected": false
+    },
+    "1105461-Cepsa HVO Unit Verde Project": {
+      "selected": false
+    },
+    "0506193-Venture Global CP2 Phase": {
+      "selected": false
+    },
+    "5840737-P-70 4HE replacement": {
+      "selected": false
+    },
+    "1103995-Pluto 1 Upgrade LGBC": {
+      "selected": false
+    },
+    "1900976-Perdaman: Syngas and Ammonia": {
+      "selected": false
+    }
+  }
+}
+ 
