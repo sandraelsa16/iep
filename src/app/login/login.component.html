@@ -2,9 +2,9 @@
     <div class="login">
         <img class="logo-img" src="assets/images/Logo.png" alt="logo">
         <p class="login-heading">Sign in</p>
-        <form action=""  [formGroup]="loginForm" (ngSubmit)="login()">
+        <!-- <form  [formGroup]="loginForm" (ngSubmit)="login()">
             <div class="login-comp">
-                <label for="">SSO ID<span class="required">*</span></label>
+                <label for="">SSO ID</label>
                 <input type="text" id="username" placeholder=" USERNAME" class="p-1" formControlName="username" >
                 <p class="text-danger fw-bolder" *ngIf="loginForm.get('username')?.errors && loginForm.get('username')?.touched">Invalid Username</p>
                 <br>
@@ -12,15 +12,28 @@
                 <input type="password" id="password" placeholder="PASSWORD" class="p-1" formControlName="password">
                 <p class="text-danger fw-bolder" *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched">Invalid password</p>
             </div>
+        </form> -->
+        <form class="k-form" [formGroup]="form">
+            <kendo-label text="SSO ID"><span class="required">*</span>
+                <kendo-textbox formControlName="username"></kendo-textbox>
+            </kendo-label>
+            <kendo-label text="Password"><span class="required">*</span>
+                <kendo-textbox formControlName="password" #email></kendo-textbox>
+            </kendo-label>
+            <div class="remember">
+                <input type="checkbox">
+                <label for="">Remember me</label>
+            </div>
+            <div class="k-form-buttons">
+                <button class="login-button" kendoButton themeColor="primary" [disabled]="!form.valid"
+                    (click)="submitForm()">
+                    Login
+                </button>
+            </div>
         </form>
-
-        <div class="remember">
-            <input type="checkbox">
-            <label for="">Remember me</label>
-        </div>
-
-        <button class="login-button" [disabled]="loginForm.invalid">Login</button>
-
     </div>
-</div>
 
+
+    <!-- <button class="login-button" [disabled]="loginForm.invalid" >Login</button> -->
+
+</div>
