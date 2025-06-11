@@ -11,24 +11,22 @@
       </span>
     </div>
   </div>
-  <div class="filter-subcontainer">
-    <div class="d-flex gap-3">
-       <kendo-label style="font-weight: bold;" text="View As">
-    <br />
-    <kendo-dropdownlist class="dropdownlist" value="Individual">
-    </kendo-dropdownlist>
-  </kendo-label>
-       <kendo-label style="font-weight: bold;" text="View As">
-    <br />
-    <kendo-dropdownlist class="dropdownlist" value="Individual">
-    </kendo-dropdownlist>
-  </kendo-label>
-    </div>
-   
-  <div >
-    <button *ngFor="let item of docButtons" class="buttondisplay" [ngClass]="{ 'selected-button': item.value === selectedButton }"
-  (click)="onSelect(item.value)" kendoButton>{{item.value}}</button>
-  </div>
+  
+<app-dropdowns/>
+
+<!-- Buttons -->
+<div class="button-container">
+  <button
+    *ngFor="let item of docButtons"
+    class="buttondisplay"
+    [ngClass]="{ 'selected-button': item.value === selectedButton }"
+    (click)="onSelect(item.value)"
+    kendoButton
+  >
+    {{ item.value }}
+  </button>
+</div>
+
   <div class="timeline-wrapper">
     <button kendoButton icon="chevron-left" class="nav-btn"> &#60;</button>
 
@@ -55,4 +53,3 @@
   </div>
   </div>
 
-</div>

@@ -1,6 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import "@progress/kendo-theme-default/dist/all.css";
 body {
     margin: 0;
     padding: 0;
 }
 
+:root{
+ 
+      --kendo-color-primary: black !important;
+  .k-checkbox:checked {
+     background-color: #1abc9c;
+     border-color:#1abc9c;
+     
+     
+  }
+}

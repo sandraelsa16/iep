@@ -1,0 +1,28 @@
+<div class="filter-bar">
+  <div class="filter-group" *ngFor="let filter of filters">
+    <label>{{ filter.label }}</label>
+
+    <!-- Multi-select dropdown -->
+    <kendo-multiselect
+      class="selectionbutton"
+      *ngIf="filter.type === 'multiselect'"
+      [data]="filter.options"
+      [(ngModel)]="filter.select"
+      [placeholder]="filter.placeholder"
+      [valuePrimitive]="true"
+    >
+    </kendo-multiselect>
+
+    <!-- Single select dropdown -->
+    <kendo-dropdownlist
+      class="selectionbutton"
+      *ngIf="filter.type === 'dropdown'"
+      [data]="filter.options"
+      [(ngModel)]="filter.select"
+      [defaultItem]="{ text: filter.placeholder, value: null }"
+      textField="text"
+      valueField="value"
+    >
+    </kendo-dropdownlist>
+  </div>
+</div>

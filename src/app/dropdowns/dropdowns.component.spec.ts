@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TabContentComponent } from './tab-content.component';
+import { DropdownsComponent } from './dropdowns.component';
 
-describe('TabContentComponent', () => {
-  let component: TabContentComponent;
-  let fixture: ComponentFixture<TabContentComponent>;
+describe('DropdownsComponent', () => {
+  let component: DropdownsComponent;
+  let fixture: ComponentFixture<DropdownsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TabContentComponent]
+      imports: [DropdownsComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(TabContentComponent);
+    fixture = TestBed.createComponent(DropdownsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
