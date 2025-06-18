@@ -15,3 +15,16 @@
     font-size: 15px;
     border-radius: 5px;
 }
+
+.dovsbuy-container {
+   font-size: smaller;
+}
+
+.date {
+    color: #27ad90;
+}
+
+.border-circle {
+    width: 50px;
+    border: 1px solid brown;
+}

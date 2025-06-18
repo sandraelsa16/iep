@@ -2,16 +2,18 @@
     <app-header />
     <div class="d-flex">
         <app-sidebar />
-        <div class="d-flex flex-column gap-2 operation-container">
+        <div class="d-flex flex-column gap-2 operation-container w-100">
             <div class="d-flex justify-content-between">
                 <div>
                     <h2>Operation</h2>
                 </div>
-                <div class="d-flex justify-content-between gap-2 align-items-center"> 
-                    <span >Last uploaded:04-06-2025</span>
+                <div class="d-flex justify-content-between gap-2 align-items-center dovsbuy-container"> 
+                    <span>Last uploaded:<span class="date"> {{formatDate}}</span> </span>
                      <span>|</span>
                      <span>YTD</span>
-                     <span>71 %</span>
+                     <div class="border-circle">
+                         <span>71 %</span>
+                     </div>
                      <button kendoButton class="dovsbuy">Do vs Buy</button>
                 </div>
             </div>
