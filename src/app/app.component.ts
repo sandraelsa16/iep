@@ -11,4 +11,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'iep-app';
+  //add the url for fetching the data from the backend
+   dataUrl = 'https://dummyjson.com/products'
 }

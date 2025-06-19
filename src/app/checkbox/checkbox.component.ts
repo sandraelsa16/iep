@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { KENDO_BUTTONS } from '@progress/kendo-angular-buttons';
 import { KENDO_TEXTBOX } from '@progress/kendo-angular-inputs';
 import { KENDO_LAYOUT } from '@progress/kendo-angular-layout';
@@ -8,7 +9,7 @@ import { KENDO_TREEVIEW } from '@progress/kendo-angular-treeview';
 @Component({
   selector: 'app-checkbox',
   standalone: true,
-  imports: [KENDO_TREEVIEW,KENDO_TEXTBOX,KENDO_LAYOUT,KENDO_BUTTONS,CommonModule],
+  imports: [KENDO_TREEVIEW,KENDO_TEXTBOX,KENDO_LAYOUT,KENDO_BUTTONS,CommonModule,FormsModule],
   templateUrl: './checkbox.component.html',
   styleUrl: './checkbox.component.css'
 })
@@ -85,5 +86,16 @@ export class CheckboxComponent {
 ];
 public expandedKeys: any[] = [2, 5];
 public checkedKeys: any[] = [1, 2, 3, 5, 6, 7, 8, 9, 10, 11];
+searchText: string = '';
+
+get filteredProjects() {
+  if (!this.searchText) {
+    return this.currentProjects;
+  }
+  return this.currentProjects.filter(project =>
+    project.text.toLowerCase().includes(this.searchText.toLowerCase())
+  );
+}
+
 
 }

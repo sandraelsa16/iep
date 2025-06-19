@@ -1,34 +1,26 @@
 <div class=" sidebar-container">
     <div class="contracts">
         <kendo-tabstrip>
-            <kendo-tabstrip-tab title="My Contracts" [selected]="true">
+            <kendo-tabstrip-tab class="h-100" title="My Contracts" [selected]="true">
                 <ng-template kendoTabContent>
                     <div class="searchbar">
                         <input type="text" class="searchbox" [style.width.px]="270"
-                            placeholder="Search job numbers or contract name..">
-                        <button kendoButton class="material-symbols-outlined searchbutton">search</button>
+                            placeholder="Search job numbers or contract name.." [(ngModel)]="searchText">
+                        <span kendoButton class="material-symbols-outlined searchbutton">search</span>
                     </div>
                     <button kendoButton class="advancedbutton"> > Advanced search</button>
-                    <p>Result:104 Contracts</p>
+                    <p>Result: {{currentProjects.length}} Contracts</p>
                     <div>
-                        <kendo-treeview
-  [nodes]="currentProjects"
-  textField="text"
-  kendoTreeViewExpandable
-  kendoTreeViewCheckable
-  kendoTreeViewHierarchyBinding
-  childrenField="items"
-  [(checkedKeys)]="checkedKeys"
-  [expandedKeys]="expandedKeys"
->
-  <ng-template kendoTreeViewNodeTemplate let-dataItem>
-    <span>
-      {{ dataItem.text }}
-      <span *ngIf="dataItem.isFavorite" class="material-symbols-outlined ">star</span>
-    </span>
-  </ng-template>
-</kendo-treeview>
-
+                        <kendo-treeview [nodes]="filteredProjects" textField="text" kendoTreeViewExpandable
+                            kendoTreeViewCheckable kendoTreeViewHierarchyBinding childrenField="items"
+                            [(checkedKeys)]="checkedKeys" [expandedKeys]="expandedKeys">
+                            <ng-template kendoTreeViewNodeTemplate let-dataItem>
+                                <span>
+                                    {{ dataItem.text }}
+                                    <span *ngIf="dataItem.isFavorite" class="material-symbols-outlined ">star</span>
+                                </span>
+                            </ng-template>
+                        </kendo-treeview>
                     </div>
                 </ng-template>
             </kendo-tabstrip-tab>
