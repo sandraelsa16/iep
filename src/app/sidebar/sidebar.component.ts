@@ -20,6 +20,7 @@ export class SidebarComponent {
 
   public selected = "Inbox";
 
+   public drawerExpanded = true; 
 
   public items: Array<any> = [
   { separator: true },
@@ -31,6 +32,10 @@ export class SidebarComponent {
   {  icon: "settings" }
 ];
 
+
+public toggleDrawer(): void { 
+    this.drawerExpanded = !this.drawerExpanded;
+  }
 
 
   public onSelect(ev: DrawerSelectEvent): void {

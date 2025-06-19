@@ -18,5 +18,4 @@ export class DashboardComponent {
     this.scheduler.getDate() + ' ' +
     this.scheduler.toLocaleString('default', { month: 'short' }) + ' ' +
     this.scheduler.getFullYear();
-
 }
