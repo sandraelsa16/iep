@@ -71,3 +71,11 @@
       .k-form-buttons {
         margin-top: 15px;
       }
+
+      #password {
+         width: 250px;
+         border-color: rgba(218, 215, 215, 0.208);
+         border-radius: 5px;
+         border-style: groove;
+         padding: 3px;
+      }

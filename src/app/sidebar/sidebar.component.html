@@ -1,5 +1,5 @@
 <div class="custom-toolbar">
-    <span class="material-symbols-outlined">
+    <span class="material-symbols-outlined" (click)="toggleDrawer()">
         device_hub </span>
     <span class="mail-box">Filter Contract</span>
     <div class="filtercontract">
@@ -16,8 +16,8 @@
     <kendo-drawer #drawer
   [items]="items"
   mode="push"
-  [expanded]="drawerExpanded"
-  [mini]="!drawerExpanded"
+ 
+ 
   (select)="onSelect($event)">
         <ng-template kendoDrawerItemTemplate let-item class="selecteditem">
        <div class="drawer-icon" [ngClass]="{ selected: item.text === selected }">
@@ -26,6 +26,8 @@
     </ng-template>
     </kendo-drawer>
     <kendo-drawer-content  >
-        <app-checkbox />
+        <div class="appcheck" *ngIf="showAppChecklist">
+               <app-checkbox />
+            </div>
     </kendo-drawer-content>
 </kendo-drawer-container>

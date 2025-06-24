@@ -1,0 +1,32 @@
+<div class="sidebar-container">
+  <!-- Tabs -->
+  <div class="tabs">
+    <button kendoButton [selected]="true">My Contracts</button>
+    <button kendoButton>All Contracts</button>
+    <button kendoButton>Favourites</button>
+  </div>
+    <input kendoTextBox placeholder="Search job number or contract name..." [(ngModel)]="searchTerm" />
+ 
+
+  <!-- Advanced Search Button -->
+  <button kendoButton look="outline" class="advanced-search-btn">
+    Advanced Search
+  </button>
+
+  <!-- Contract Tree -->
+  <div class="contracts-result">
+    <p class="results-count">Result: 104 Contracts</p>
+
+    <kendo-treeview
+      [nodes]="contractData"
+      textField="text"
+      kendoTreeViewExpandable
+      kendoTreeViewCheckable
+    
+      [(checkedKeys)]="checkedKeys"
+      [expandBy]="'text'"
+      [hasChildren]="hasChildren"
+    >
+    </kendo-treeview>
+  </div>
+</div>

@@ -20,7 +20,7 @@ export class SidebarComponent {
 
   public selected = "Inbox";
 
-   public drawerExpanded = true; 
+   public drawerExpanded=false; 
 
   public items: Array<any> = [
   { separator: true },
@@ -32,9 +32,10 @@ export class SidebarComponent {
   {  icon: "settings" }
 ];
 
-
+showAppChecklist:boolean = true;
 public toggleDrawer(): void { 
     this.drawerExpanded = !this.drawerExpanded;
+    this.showAppChecklist = !this.showAppChecklist;
   }
 
 

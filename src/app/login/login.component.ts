@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { KENDO_BUTTONS } from '@progress/kendo-angular-buttons';
 import { KENDO_TEXTBOX } from '@progress/kendo-angular-inputs';
@@ -9,7 +9,7 @@ import { KENDO_LABEL } from '@progress/kendo-angular-label';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule,KENDO_LABEL,KENDO_BUTTONS,KENDO_TEXTBOX],
+  imports: [ReactiveFormsModule,CommonModule,KENDO_LABEL,KENDO_BUTTONS,KENDO_TEXTBOX,],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -46,7 +46,9 @@ export class LoginComponent {
     password: "",
    
   };
+
   
+
 
   constructor(private router: Router) {
     this.form = new FormGroup({
@@ -55,7 +57,9 @@ export class LoginComponent {
         Validators.required,
         Validators.pattern('^[A-Za-z0-9]*$'),
       ]),
+      
     });
+    
   }
 
   public submitForm(): void {
