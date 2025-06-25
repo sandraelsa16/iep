@@ -7,13 +7,3 @@ body {
     padding: 0;
 }
 
-:root{
- 
-      --kendo-color-primary: black !important;
-  .k-checkbox:checked {
-     background-color: #1abc9c;
-     border-color:#1abc9c;
-     
-     
-  }
-}

@@ -1,5 +1,9 @@
-<kendo-tabstrip >
-  <kendo-tabstrip-tab *ngFor="let tab of tabs; let i = index" [title]="tab.title">
+<kendo-tabstrip>
+  <kendo-tabstrip-tab
+    *ngFor="let tab of tabs; let i = index"
+    [title]="tab.title"
+    [selected]="tab.title === 'ISPO'"
+  >
     <ng-template kendoTabContent>
       <div *ngIf="tab.title === 'ISPO'; else otherTab">
         <div class="d-flex flex-column">
@@ -18,4 +22,3 @@
     </ng-template>
   </kendo-tabstrip-tab>
 </kendo-tabstrip>
-

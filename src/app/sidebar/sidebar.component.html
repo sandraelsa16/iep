@@ -1,23 +1,14 @@
 <div class="custom-toolbar">
     <span class="material-symbols-outlined" (click)="toggleDrawer()">
         device_hub </span>
-    <span class="mail-box">Filter Contract</span>
-    <div class="filtercontract">
-        <span class="material-symbols-outlined">more_horiz</span>
-        <button kendoButton (click)="toggleDrawer()">
-  <span class="material-symbols-outlined">arrow_back</span>
-</button>
-        <!-- <button kendoButton >
-            <span class="material-symbols-outlined">arrow_back</span>
-        </button> -->
-    </div>
+   
 </div>
 <kendo-drawer-container>
     <kendo-drawer #drawer
   [items]="items"
   mode="push"
  
- 
+  [mini]="!drawerExpanded"
   (select)="onSelect($event)">
         <ng-template kendoDrawerItemTemplate let-item class="selecteditem">
        <div class="drawer-icon" [ngClass]="{ selected: item.text === selected }">
