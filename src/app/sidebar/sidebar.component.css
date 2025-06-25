@@ -1,7 +1,11 @@
-.sidebar-container {
-    border: 1px solid rgb(228, 228, 228);
-    margin-right: 10px;
-    width: 450px;
+.sideBarcomponent {
+    border: 2px solid rgb(209, 209, 209);
+    height: 100%;
+    padding-right: 10px;
+}
+
+.drawer-container {
+    border-right: 1px solid rgb(219, 219, 219);
 }
 
 kendo-drawer-container {
@@ -18,15 +22,7 @@ kendo-drawer-container {
 }
 
 .custom-toolbar {
-    width: 100%;
-    background-color: #f6f6f6;
-    line-height: 10px;
-    border-bottom: inset;
-    border-bottom-width: 1px;
-    padding: 3px 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+   border-right: 1px solid gray;
 
 }
 
@@ -36,11 +32,6 @@ kendo-drawer-container {
     font-size: 17px;
 }
 
-.filtercontract {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
+
 
 

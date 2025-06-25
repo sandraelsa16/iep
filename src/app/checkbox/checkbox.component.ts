@@ -17,7 +17,7 @@ export class CheckboxComponent {
    public currentProjects: any[] = [
   {
     id: 1,
-    text: "1104096–NCIC III Ammonia/...",
+    text: "1104096–NCIC III Ammonia/Urea Plant – STCC – Compression",
     isFavorite: true,
     checked: true
   },
@@ -82,6 +82,30 @@ export class CheckboxComponent {
   {
     id: 15,
     text: "0506193–Venture Global CP2 Phase ..."
+  },
+  {
+    id: 16,
+    text: "5840737-P-70 4HE replacement"
+  },
+  {
+    id: 17,
+    text: "1103995–Pluto 1 Upgrade LGBC"
+  },
+  {
+    id: 18,
+    text: "1900976–Perdaman: Syngas and Ammonia"
+  },
+  {
+    id: 19,
+    text: "1900934–Perdaman:  Ammonia"
+  },
+  {
+    id: 20,
+    text: "1902445–Perdaman:  Ammonia"
+  },
+  {
+    id: 21,
+    text: "190525–Perdaman testing"
   }
 ];
 public expandedKeys: any[] = [2, 5];
@@ -97,7 +121,11 @@ get filteredProjects() {
   );
 }
 
+public showSidebar:any=true;
 
+toggleSidebar(){
+  this.showSidebar = !this.showSidebar
+}
 
 
 }

@@ -11,18 +11,23 @@ import { NotificationComponent } from "../notification/notification.component";
   standalone: true,
   imports: [  FilteractivitiesComponent,ActivitiesComponent, NotificationComponent,TabStripModule,CommonModule],
   templateUrl: './tabs.component.html',
-  styleUrl: './tabs.component.css'
+  styleUrl: './tabs.component.scss'
 })
 export class TabsComponent {
-  public tabs = [
-    { title: 'ISPO', content: 'ISPO content' },
-    { title: 'VDR', content: 'VDR content' },
-    { title: 'VDR Revision', content: 'Revision content' },
-    { title: 'VDR Finalization', content: 'Finalization content' },
-    { title: 'OTD Trends', content: 'Trends content' },
-    { title: 'Engineering Productivity', content: 'Productivity content' },
-    { title: 'Technical Alignment', content: 'Alignment content' }
+    selectedTab = 'ISPO';
+
+  tabs = [
+    { title: 'ISPO', content: '' },
+    { title: 'VDR', content: 'VDR Content Here' },
+    { title: 'VDR Revision', content: 'VDR Revision Content' },
+    { title: 'VDR Finalization', content: 'Finalization Info' },
+    { title: 'OTD Trends', content: 'Trends go here' },
+    { title: 'Engineering Productivity', content: 'Engineering Content' },
+    { title: 'Technical Alignment', content: 'Technical Info' }
   ];
 
- selectedIndex = 0;
+  onTabSelect(title: string): void {
+    this.selectedTab = title;
+  }
+
 }

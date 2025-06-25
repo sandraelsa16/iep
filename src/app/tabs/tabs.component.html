@@ -1,5 +1,5 @@
-<kendo-tabstrip>
-  <kendo-tabstrip-tab
+<!-- <kendo-tabstrip>
+  <kendo-tabstrip-tab class="tab-container"
     *ngFor="let tab of tabs; let i = index"
     [title]="tab.title"
     [selected]="tab.title === 'ISPO'"
@@ -21,4 +21,31 @@
       </ng-template>
     </ng-template>
   </kendo-tabstrip-tab>
+</kendo-tabstrip> -->
+
+<kendo-tabstrip class="custom-tabstrip">
+  <kendo-tabstrip-tab
+    *ngFor="let tab of tabs"
+    [title]="tab.title"
+    [selected]="tab.title === selectedTab"
+    (tabSelect)="onTabSelect(tab.title)"
+  >
+    <ng-template kendoTabContent>
+      <div *ngIf="tab.title === 'ISPO'; else otherTab">
+        <div class="d-flex flex-column">
+          <h6>
+            1104096–NCIC III Ammonia/Urea Plant – STCC – Compression,
+            1104088–Ar Ratawi, 9000133–Leviathan Tex, 1709043–...
+          </h6>
+          <app-notification />
+          <app-filteractivities></app-filteractivities>
+          <app-activities></app-activities>
+        </div>
+      </div>
+      <ng-template #otherTab>
+        {{ tab.content }}
+      </ng-template>
+    </ng-template>
+  </kendo-tabstrip-tab>
 </kendo-tabstrip>
+

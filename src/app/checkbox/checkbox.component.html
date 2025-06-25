@@ -1,13 +1,15 @@
-<div class=" sidebar-container">
+<div class=" sidebar-container" *ngIf="showSidebar">
     <div class="contracts">
-         <span class="mail-box">Filter Contract</span>
-    <div class="filtercontract">
-        <span class="material-symbols-outlined">more_horiz</span>
-        <button kendoButton >
-  <span class="material-symbols-outlined">arrow_back</span>
-</button>
-       
-    </div>
+        <div class="filtercontract">
+            <div class="ms-3"><span class="mail-box fw-bolder">Filter Contract</span></div>
+            <div class="d-flex justify-content-between align-items-center gap-2">
+                <span class="material-symbols-outlined">more_horiz</span>
+                <button class="backarrow" kendoButton (click)="toggleSidebar()">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+            </div>
+
+        </div>
         <kendo-tabstrip>
             <kendo-tabstrip-tab class="h-100" title="My Contracts" [selected]="true">
                 <ng-template kendoTabContent>
