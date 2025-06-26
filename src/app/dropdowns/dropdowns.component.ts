@@ -25,22 +25,28 @@ export class DropdownsComponent {
   },
   {
     label: 'Functions',
-    type: 'multiselect',
-    placeholder: 'ENG, TECH',
-    select: ['ENG', 'TECH'],
-    options: ['ENG', 'TECH', 'QA', 'ADMIN']
+    type: 'dropdown',
+    placeholder: 'ENG,TECH',
+    select: 'ENG,TECH',
+    options: [
+      { text: 'ENG,TECH', value: 'ENG,TECH' },
+      { text: 'PROJECT', value: 'PROJECT' }
+    ]
   },
   {
     label: 'Document Type',
-    type: 'multiselect',
-    placeholder: 'Internal , Step',
-    select: ['Internal', 'Step'],
-    options: ['Internal', 'Step', 'External', 'Report']
+    type: 'dropdown',
+    placeholder: 'Select Document Type',
+    select: 'Internal,Step',
+    options: [
+      { text: 'Internal,Step', value: 'Internal,Step' },
+      { text: 'External', value: 'External' }
+    ]
   },
   {
     label: 'Activity Status',
     type: 'dropdown',
-    placeholder: 'Select status',
+    placeholder: 'select Activity Status',
     select: 'Not Completed',
     options: [
       { text: 'Completed', value: 'Completed' },
@@ -48,31 +54,25 @@ export class DropdownsComponent {
     ]
   },
   {
-    label: 'Activity Type',
-    type: 'multiselect',
-    placeholder: '560,510',
-    select: ['560', '510'],
-    options: ['560', '510', '480', '430']
-  },
-  {
     label: 'Finish By',
     type: 'dropdown',
-    placeholder: 'Late Finish',
+    placeholder: 'Select Finish By',
     select: 'Late Finish',
     options: [
-      { text: 'Early Finish', value: 'Early Finish' },
-      { text: 'Late Finish', value: 'Late Finish' }
+      { text: 'Late Finish', value: 'Late Finish' },
+      { text: 'Early Finish', value: 'Early Finish' }
     ]
   },
   {
     label: 'Date Type',
     type: 'dropdown',
-    placeholder: 'Select date type',
+    placeholder: 'Select Date Type',
     select: 'Business',
     options: [
       { text: 'Business', value: 'Business' },
-      { text: 'Calendar', value: 'Calendar' }
+      { text: 'Project', value: 'Project' }
     ]
   }
+  
 ];
 }
