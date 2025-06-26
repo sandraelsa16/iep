@@ -36,7 +36,7 @@ export class DropdownsComponent {
   {
     label: 'Document Type',
     type: 'dropdown',
-    placeholder: 'Select Document Type',
+    placeholder: 'Internal,Step',
     select: 'Internal,Step',
     options: [
       { text: 'Internal,Step', value: 'Internal,Step' },
@@ -46,7 +46,7 @@ export class DropdownsComponent {
   {
     label: 'Activity Status',
     type: 'dropdown',
-    placeholder: 'select Activity Status',
+    placeholder: 'Not Completed',
     select: 'Not Completed',
     options: [
       { text: 'Completed', value: 'Completed' },
@@ -54,9 +54,19 @@ export class DropdownsComponent {
     ]
   },
   {
+    label: 'Activity Type',
+    type: 'dropdown',
+    placeholder: '560,561',
+    select: '560,561',
+    options: [
+      { text: '560,561', value: '560,561' },
+      { text: '568,555', value: '568,555' }
+    ]
+  },
+  {
     label: 'Finish By',
     type: 'dropdown',
-    placeholder: 'Select Finish By',
+    placeholder: 'Late Finish',
     select: 'Late Finish',
     options: [
       { text: 'Late Finish', value: 'Late Finish' },
@@ -66,7 +76,7 @@ export class DropdownsComponent {
   {
     label: 'Date Type',
     type: 'dropdown',
-    placeholder: 'Select Date Type',
+    placeholder: 'Business',
     select: 'Business',
     options: [
       { text: 'Business', value: 'Business' },
